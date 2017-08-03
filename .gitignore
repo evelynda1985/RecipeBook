@@ -1,0 +1,12 @@
+# Eclipse generated files
+.classpath
+.project
+.settings/
+build.fxbuild
+
+#Compiled code
+/bin/
+
+# Database
+/database/RecipesDB/
+/database/derby.log

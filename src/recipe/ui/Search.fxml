@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipe.ui.SearchController">
+   <children>
+      <Pane fx:id="meat" onDragDetected="#meat" prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@MyCSS.css">
+         <children>
+            <Label layoutX="325.0" layoutY="24.0" text="My Recipes">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="80.0" text="Id:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="recipe_id" layoutX="58.0" layoutY="80.0" onAction="#recipe_id" prefHeight="31.0" prefWidth="93.0" />
+            <Label layoutX="202.0" layoutY="80.0" text="Name:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="recipe_name" layoutX="267.0" layoutY="80.0" onAction="#recipe_name" />
+            <Label layoutX="497.0" layoutY="80.0" text="Dish with:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ChoiceBox layoutX="599.0" layoutY="80.0" prefHeight="31.0" prefWidth="173.0" />
+            <Button fx:id="btn_search" layoutX="368.0" layoutY="128.0" mnemonicParsing="false" onAction="#btn_search" text="Search" />
+            <Button fx:id="btn_edit_recipe" layoutX="58.0" layoutY="548.0" mnemonicParsing="false" onAction="#btn_edit_recipe" text="Edit Recipe" />
+            <Button fx:id="btn_delete_recipe" layoutX="244.0" layoutY="548.0" mnemonicParsing="false" onAction="#btn_delete_recipe" text="Delete Recipe" />
+            <Button fx:id="btn_see_recipe" layoutX="446.0" layoutY="548.0" mnemonicParsing="false" onAction="#btn_see_recipe" text="See Recipe" />
+            <TableView fx:id="tblRecipesEntry" layoutX="29.0" layoutY="173.0" prefHeight="347.0" prefWidth="743.0">
+              <columns>
+                <TableColumn fx:id="view_recipe_id" onEditStart="#view_recipe_id" prefWidth="63.0" text="Id" />
+                <TableColumn fx:id="view_recipe_name" prefWidth="161.0" text="Recipe Name" />
+                  <TableColumn fx:id="view_recipe_instructions" prefWidth="263.0" text="Instrutions" />
+                  <!-- <TableColumn fx:id="view_recipe_ingredients" prefWidth="255.0" text="Ingredients" /> -->
+              </columns>
+            </TableView>
+            <Pagination fx:id="pagination" layoutX="569.0" layoutY="539.0" onDragDetected="#pagination" prefHeight="56.0" prefWidth="201.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

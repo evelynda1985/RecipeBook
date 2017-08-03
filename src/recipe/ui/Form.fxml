@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@MyCSS.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipe.ui.FormController">
+   <children>
+      <Pane layoutX="-306.0" layoutY="-153.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextField fx:id="name_ingredient" layoutX="168.0" layoutY="189.0" onAction="#name_ingredient" />
+      <Label layoutX="300.0" layoutY="47.0" text="Add Ingredient">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="194.0" text="Name:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="amount_ingredient" layoutX="168.0" layoutY="252.0" onAction="#amount_ingredient" />
+      <Label layoutX="37.0" layoutY="257.0" text="Amount:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="measure_ingredient" layoutX="168.0" layoutY="311.0" onDragDetected="#measure_ingredient" prefHeight="31.0" prefWidth="187.0" />
+      <Label layoutX="35.0" layoutY="312.0" text="Measure:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="372.0" text="Brand:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="brand_ingredient" layoutX="168.0" layoutY="374.0" onAction="#brand_ingredient" />
+      <Label layoutX="473.0" layoutY="137.0" text="Where to buy it">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="422.0" layoutY="194.0" text="Address: ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="address_ingredient" layoutX="535.0" layoutY="189.0" onAction="#address_ingredient" />
+      <Label layoutX="422.0" layoutY="257.0" text="City:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="city_ingredient" layoutX="535.0" layoutY="252.0" onAction="#city_ingredient" />
+      <Label layoutX="423.0" layoutY="317.0" text="State:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="state_ingredient" layoutX="535.0" layoutY="317.0" onDragDetected="#state_ingredient" prefHeight="31.0" prefWidth="187.0" />
+      <Label layoutX="423.0" layoutY="382.0" text="Zip Code:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="zip_ingredient" layoutX="535.0" layoutY="382.0" onAction="#zip_ingredient" />
+      <Button fx:id="btn_saveingredient" layoutX="323.0" layoutY="516.0" mnemonicParsing="false" onAction="#btn_saveingredient" text="Save Ingredient" />
+      <Button fx:id="btn_cancel" layoutX="478.0" layoutY="516.0" mnemonicParsing="false" onAction="#btn_cancel" text="back" />
+      <ChoiceBox fx:id="dishwith" layoutX="168.0" layoutY="435.0" onDragDetected="#dishwith" prefHeight="31.0" prefWidth="187.0" />
+      <Label layoutX="39.0" layoutY="436.0" text="Ing is a:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="message" layoutX="246.0" layoutY="481.0" onDragDetected="#message" prefHeight="21.0" prefWidth="431.0" textFill="#f20909" />
+   </children>
+</AnchorPane>

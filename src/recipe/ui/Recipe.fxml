@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane layoutX="800.0" layoutY="600.0" styleClass="root" stylesheets="@MyCSS.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipe.ui.RecipeController">
+   <children>
+      <AnchorPane layoutX="-800.0" layoutY="-600.0" prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@MyCSS.css">
+         <children>
+            <Pane layoutX="-1.0" layoutY="-4.0" prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@MyCSS.css">
+               <children>
+                  <Label layoutX="343.0" layoutY="52.0" text="Recipe">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_editrecipe" layoutX="214.0" layoutY="536.0" mnemonicParsing="false" onAction="#btn_editrecipe" text="Edit Recipe" />
+                  <Button fx:id="btn_addrecipe" layoutX="36.0" layoutY="536.0" mnemonicParsing="false" onAction="#btn_addrecipe" text="Add Recipe" />
+                  <Button fx:id="btn_addingredient" layoutX="558.0" layoutY="536.0" mnemonicParsing="false" onAction="#btn_addingredient" text="Add Ingredient" />
+                  <Label layoutX="40.0" layoutY="252.0" text="Instructions:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="recipe_description" layoutX="40.0" layoutY="292.0" onDragDetected="#recipe_description" prefHeight="200.0" prefWidth="348.0" />
+                  <Label layoutX="407.0" layoutY="122.0" text="Ingredients:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tbl_ingredients" layoutX="407.0" layoutY="167.0" prefHeight="320.0" prefWidth="363.0">
+                    <columns>
+                      <TableColumn fx:id="tbl_name_column" prefWidth="139.0" text="Name" />
+                      <TableColumn fx:id="tbl_amount_column" prefWidth="108.0" text="Amount" />
+                        <TableColumn fx:id="tbl_measure_column" prefWidth="115.0" text="Measure" />
+                    </columns>
+                  </TableView>
+                  <Label fx:id="message" layoutX="25.0" layoutY="502.0" prefHeight="30.0" prefWidth="363.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <TextField fx:id="recipe_name" layoutX="176.0" layoutY="192.0" onAction="#recipe_name" />
+            <Label layoutX="39.0" layoutY="192.0" text="Name:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="122.0" text="Id:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="recipe_id" layoutX="176.0" layoutY="122.0" onAction="#recipe_id" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
