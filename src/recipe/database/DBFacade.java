@@ -25,11 +25,13 @@ public class DBFacade {
 
 		try {
 			pstmt = conn.prepareStatement(
-					"insert into APP.TBL_INGREDIENTS (NAME, AMOUNT, MEASURE,TBL_RECIPES_ID) values (?, ?, ?,?)");
+					"insert into APP.TBL_INGREDIENTS (NAME, AMOUNT, MEASURE, TBL_RECIPES_ID, BRAND, TYPEING) values (?, ?, ?, ?, ?, ?)");
 			pstmt.setString(1, ingredient.getName());
 			pstmt.setString(2, ingredient.getAmount());
 			pstmt.setString(3, ingredient.getMeasure());
 			pstmt.setLong(4, recipeId);
+			pstmt.setString(5, ingredient.getBrand());
+			pstmt.setString(6, ingredient.getDishWith());
 
 			pstmt.executeUpdate();
 		} catch (SQLException sqlEx) {

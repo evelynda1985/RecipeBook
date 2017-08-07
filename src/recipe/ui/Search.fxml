@@ -3,7 +3,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Pagination?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -39,9 +38,9 @@
             </Label>
             <ChoiceBox layoutX="599.0" layoutY="80.0" prefHeight="31.0" prefWidth="173.0" />
             <Button fx:id="btn_search" layoutX="368.0" layoutY="128.0" mnemonicParsing="false" onAction="#btn_search" text="Search" />
-            <Button fx:id="btn_edit_recipe" layoutX="58.0" layoutY="548.0" mnemonicParsing="false" onAction="#btn_edit_recipe" text="Edit Recipe" />
-            <Button fx:id="btn_delete_recipe" layoutX="244.0" layoutY="548.0" mnemonicParsing="false" onAction="#btn_delete_recipe" text="Delete Recipe" />
-            <Button fx:id="btn_see_recipe" layoutX="446.0" layoutY="548.0" mnemonicParsing="false" onAction="#btn_see_recipe" text="See Recipe" />
+            <Button fx:id="btn_edit_recipe" layoutX="552.0" layoutY="548.0" mnemonicParsing="false" onAction="#btn_edit_recipe" text="Edit Recipe" />
+            <Button fx:id="btn_delete_recipe" layoutX="661.0" layoutY="548.0" mnemonicParsing="false" onAction="#btn_delete_recipe" text="Delete Recipe" />
+            <Button fx:id="btn_see_recipe" layoutX="448.0" layoutY="548.0" mnemonicParsing="false" onAction="#btn_see_recipe" text="See Recipe" />
             <TableView fx:id="tblRecipesEntry" layoutX="29.0" layoutY="173.0" prefHeight="347.0" prefWidth="743.0">
               <columns>
                 <TableColumn fx:id="view_recipe_id" onEditStart="#view_recipe_id" prefWidth="63.0" text="Id" />
@@ -50,7 +49,7 @@
                   <!-- <TableColumn fx:id="view_recipe_ingredients" prefWidth="255.0" text="Ingredients" /> -->
               </columns>
             </TableView>
-            <Pagination fx:id="pagination" layoutX="569.0" layoutY="539.0" onDragDetected="#pagination" prefHeight="56.0" prefWidth="201.0" />
+            <Button fx:id="btn_home" layoutX="38.0" layoutY="548.0" mnemonicParsing="false" onAction="#btn_home" text="Home" />
          </children>
       </Pane>
    </children>

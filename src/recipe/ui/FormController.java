@@ -64,6 +64,9 @@ public class FormController {
 	private Label message;
 
 	@FXML
+	private Label recipeId;
+
+	@FXML
 	void message(MouseEvent event) {
 
 	}

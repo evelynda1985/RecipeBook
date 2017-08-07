@@ -76,14 +76,10 @@ public class RecipeController {
 
 		new DBFacade().registerNewRecipe(recipe, id_recipe);
 
-		/*
-		 * Ingredient ingredient = new Ingredient(this.tbl_name_column.getCellData(0),
-		 * this.tbl_amount_column.getCellData(0),
-		 * this.tbl_measure_column.getCellData(0));
-		 */
-
 		this.message.setText("Your recipe was successful created");
-		Navigation.goHome(this);
+		// Navigation.goHome(this);
+		// Navigation.goPopUp(this);
+		Navigation.goSearch(this);
 		System.out.println(">>>>>>>>>>>>>>" + this.recipe_name.getText());
 		System.out.println(">>>>>>>>>>>>>>" + String.valueOf(id_recipe));
 		System.out.println(">>>>>>>>>>>>>>" + this.recipe_description.getText());

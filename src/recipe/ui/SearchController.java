@@ -7,7 +7,6 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Pagination;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -54,12 +53,14 @@ public class SearchController {
 	@FXML
 	private TableColumn<Recipe, String> view_recipe_instructions;
 
-	/*
-	 * @FXML private TableColumn<Recipe, ?> view_recipe_ingredients;
-	 */
+	@FXML
+	private Button btn_home;
 
 	@FXML
-	private Pagination pagination;
+	void btn_home(ActionEvent event) {
+		Navigation.goHome(this);
+
+	}
 
 	@FXML
 	void btn_delete_recipe(ActionEvent event) throws Exception {

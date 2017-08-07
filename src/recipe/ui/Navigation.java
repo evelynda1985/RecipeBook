@@ -19,6 +19,7 @@ final class Navigation {
 		Stage stage;
 		if (newStage) {
 			stage = new Stage();
+			stage.setTitle("Recipe System");
 		} else {
 			stage = navigationStage;
 			navigationStage.setTitle("Recipe System");

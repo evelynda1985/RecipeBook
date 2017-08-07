@@ -13,14 +13,13 @@ public class Ingredient {
 	private String amount;
 	private String measure;
 	private String dishWith;
+	private String brand;
 
 	public Ingredient(String name, String amount, String measure, String dishWith) {
-		// this.id = id;
 		this.name = name;
 		this.amount = amount;
 		this.measure = measure;
 		this.dishWith = dishWith;
-
 	}
 
 	public Ingredient(long recipe_id, String name, String amount, String measure) {
@@ -78,6 +77,10 @@ public class Ingredient {
 
 	public int getTBL_RECIPES_ID() {
 		return this.recipe_id;
+	}
+
+	public String getBrand() {
+		return this.brand;
 	}
 
 }
